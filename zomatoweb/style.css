@@ -5,35 +5,176 @@
 
 body {
     font-family: merriweather, sans-serif;
-    background-color: #f9fafc;
+    background-color: #ebf2ff;
 }
 
 .navbar {
     background-color: #f9fafc;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 80px;
-    
-
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .logo {
-    color: #E23744;
-    font-size: 24px;
-    font-weight: 900;
-    font-style: oblique;
-    font-family: sans-serif;
+    width: 80px;
 }
 
-.nav__item {
-    background-image: linear-gradient(
-        to right,
-        #ff512f 0%,#dd2476 51%,#ff512f 100%
-        );
+.logo__image {
+    width: 100%;
+}
+
+.pri-button {
+    background-image: linear-gradient(to right,
+            #ff512f 0%, #dd2476 51%, #ff512f 100%);
     color: white;
-    border:none;
-    border-radius: 6px;
-    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 9px 18px 9px 18px;
+    border-radius: 4px;
+}
+
+.pri-button:hover {
+    background-image: linear-gradient(0deg,
+            #ff512f 0%, #dd2476 51%, #ff512f 100%);
+    border: 1px solid #dd2476;
+    cursor: pointer;
+}
+
+.container {
+    padding: 15px;
+}
+
+.hero__image__container {
+    width: 100%;
+}
+
+.hero__button__container {
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.hero__image {
+    width: 100%;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
+    border-radius: 7px;
+}
+
+.hero__lines {
+    line-height: 35px;
+    padding-top: 20px;
+}
+
+.hero__text {
+    font-size: 30px;
+    color: #1D3557;
+    font-weight: 900;
+    display: inline-block;
+}
+
+.ex__menu__container {
+    position: relative;
+    margin-top: 70px;
+}
+
+.ex__menu__text {
+    font-size: 30px;
+    color: #1D3557;
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 36px;
+    font-weight: 900;
+}
+
+.foodcard {
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+.food__card__image__container {
+    width: 100%;
+    background-image:linear-gradient(180deg,
+    #ff512f 0%, #dd2476 51%, white 100%);
+}
+
+.food__card__image {
+    width: 100%;
+    height:100%;
+    border-radius: 6px 6px 0 0;
+}
+
+.food__card__text {
+    color: #1D3557;
+    font-weight: bolder;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px; 
+}
+
+@media (min-width:768px) {
+    .navbar {
+        height: 53px;
+        padding-left: 50px;
+        padding-right: 60px;
+    }
+
+    .pri-button {
+        font-size: 13px;
+        padding: 11px 23px 11px 23px;
+        border-radius: 4px;
+    }
+
+    .nav__button_container {
+        margin-bottom: 5px;
+    }
+
+    .hero__container {
+        margin-top: 3px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .hero__lines {
+        line-height: 35px;
+    }
+
+    .hero__text {
+        font-size: 35px;
+        margin-bottom: 0px;
+    }
+
+    .hero__image {
+        margin-top: 12px;
+    }
+
+    .foodcard__list {
+        display: flex;
+        gap: 20px;
+        padding: 0 30px;
+    }
+    .ex__menu__bg{
+        position:absolute;
+        width:100%;
+        height:115%;
+        background-image: linear-gradient(to right,
+                #ff512f 0%, #dd2476 51%, #ff512f 100%);
+        z-index:-3;
+        transform:skewY(-5deg);
+        }
+    
+    #pizza__card {
+        margin-top: -24px;
+        margin-bottom: 36px;
+    }
+}
+
+@media (min-width:1024px) {
+    .container {
+        padding: 20px 220px 0 200px;
+    }
 }
